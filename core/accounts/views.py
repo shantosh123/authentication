@@ -2,9 +2,11 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate
 from django.contrib import messages
 from .forms import UserRegistrationForm 
-from accounts.models import User as MyUSer
+
 
 # Create your views here.
+from django.contrib.auth import get_user_model
+User = get_user_model()
 
 def home(request):
     return render(request, 'accounts/home.html')

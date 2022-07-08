@@ -10,6 +10,15 @@ User = get_user_model()
 def home(request):
     return render(request, 'accounts/home.html')
 
+def about(request):
+    return render(request, 'accounts/about.html')
+
+def contact(request):
+    return render(request, 'accounts/contact.html')
+
+def profile(request):
+    return render(request, 'accounts/profile.html')
+
 def register(request):
     if request.method == 'POST':
         form = UserRegistrationForm(request.POST)

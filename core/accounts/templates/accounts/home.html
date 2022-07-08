@@ -1,3 +1,9 @@
+{% extends 'accounts/base.html' %}
+
+
+{% block content %}
+<br>
+<center>
 {% if user.is_authenticated %}
 
     <h3>Welcome To my Home page  {{ user.email }}!</h3>
@@ -10,3 +16,5 @@
     <a href="{% url 'login' %}">Login</a>
 
 {% endif %}
+</center>
+{% endblock%}

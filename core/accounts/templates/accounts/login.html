@@ -1,3 +1,9 @@
+{% extends 'accounts/base.html' %}
+
+
+{% block content %}
+
+<center>
 <h1> This is our Login Page</h1>
 
 <h3>login</h3>
@@ -11,3 +17,5 @@
 </form>
 
 <p>If You Don't Have an Account? <a href="{% url 'register' %}">Signup here</a></p>
+</center>
+{% endblock %}

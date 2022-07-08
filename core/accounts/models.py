@@ -5,7 +5,7 @@ from .manager import UserManager
 # Create your models here.
 
 class User(AbstractUser):   #abstract user provide to customize option to the default user model.
-    username = None #it will avoid to take username at the time of log in 
+    username = None #it will avoid to take username at the time of login 
     email = models.EmailField(unique=True)
    
     

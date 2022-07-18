@@ -1,18 +1,21 @@
 {% extends 'accounts/base.html' %}
 
+{% block title %}Create an Account{% endblock%}
+{% load crispy_forms_tags %}
+
 {% block content%}
 
-<h1> Welcome To Our Registration Page</h1>
+<h1 class="text-center"> Welcome To Our Registration Page</h1>
 <h3>Register here</h3>
 <hr>
 
-<form action="" method="POST">
+<form action="" method="POST" class="form-group">
     {% csrf_token %}
     <table>
-    {{ form.as_p }}
+    {{ form | crispy }}
 </table>
 
-    <button type="submit">Register</button>
+    <button type="submit" class="btn btn-success">Register</button>
 </form>
 
 {% endblock %}
